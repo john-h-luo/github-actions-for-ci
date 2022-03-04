@@ -3,3 +3,9 @@ on: pull_request_review
 jobs:
   labelWhenApproved:
     runs-on: ubuntu-latest
+    steps:
+      - name: "Lable When Approved"
+        uses: pullreminders/label-when-approved-action@main
+        env: |
+          APPROVALS: 1
+          ADD_LABEL: "Ready to merge"
